@@ -9,5 +9,5 @@ function Start () {
 }
 
 function Update () {
-	print(gameObject.name+" HP: "+hp);
+	//print(gameObject.name+" HP: "+hp);
 }
