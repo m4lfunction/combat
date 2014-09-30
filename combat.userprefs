@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Units\Goblin\GoblinAI.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menus\SquadManagement.js">
     <Files>
-      <File FileName="Assets\Scripts\Units\Goblin\GoblinAI.js" Line="78" Column="8" />
-      <File FileName="Assets\Scripts\Units\Counter.js" Line="6" Column="29" />
-      <File FileName="Assets\Scripts\FlagController.js" Line="14" Column="33" />
+      <File FileName="Assets\Scripts\Units\Goblin\GoblinAI.js" Line="82" Column="2" />
+      <File FileName="Assets\Scripts\Units\Counter.js" Line="9" Column="20" />
+      <File FileName="Assets\Scripts\FlagController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menus\MainMenu.js" Line="4" Column="2" />
+      <File FileName="Assets\Scripts\Menus\SquadManagement.js" Line="20" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

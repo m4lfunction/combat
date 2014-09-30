@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemies\Cube\CubeKillScript.js" />
      <Compile Include="Assets\Scripts\FlagController.js" />
+     <Compile Include="Assets\Scripts\Menus\MainMenu.js" />
+     <Compile Include="Assets\Scripts\Menus\SquadManagement.js" />
      <Compile Include="Assets\Scripts\Units\Counter.js" />
      <Compile Include="Assets\Scripts\Units\Goblin\GoblinAI.js" />
  <Reference Include="Assembly-UnityScript-firstpass">
