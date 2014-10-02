@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Units\Counter.js" />
      <Compile Include="Assets\Scripts\Units\Goblin\GoblinAI.js" />
      <Compile Include="Assets\Scripts\Units\Golem\GolemAI.js" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/daniel/Documents/GitHub/combat/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
