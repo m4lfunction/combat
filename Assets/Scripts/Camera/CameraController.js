@@ -5,7 +5,9 @@ var scrollSpeed : float = 20;
 var distance : float = 50;
 
 function Start () {
-
+	if(target==null){
+		target = GameObject.FindWithTag("Hero");
+	}
 }
 
 function Update () {

@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Camera\CameraController.js" />
      <Compile Include="Assets\Scripts\Enemies\Cube\CubeKillScript.js" />
      <Compile Include="Assets\Scripts\Flag\FlagController.js" />
+     <Compile Include="Assets\Scripts\Flag\InstantiateSquad.js" />
      <Compile Include="Assets\Scripts\Menus\ChooseHero.js" />
      <Compile Include="Assets\Scripts\Menus\Chooselevel.js" />
      <Compile Include="Assets\Scripts\Menus\MainMenu.js" />

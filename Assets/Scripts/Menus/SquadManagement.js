@@ -15,12 +15,17 @@ function OnGUI() {
 	GUI.Box(Rect(220,30,200,30),"Goblins: "+goblinCounter);
 
 	if (GUI.Button(Rect(10,70,200,30),"Buy Goblin - 2 $")){
-		money -= 2;
+		if (money >= 2){
+			money -= 2;
+			goblinCounter++;
+		}
 	}
-	if (GUI.Button(Rect(10,110,200,30),"Main Menu")){
+	if (GUI.Button(Rect(10,110,200,30),"Cancel")){
 		Application.LoadLevel("MainMenu");
 	}
 	if (GUI.Button(Rect(10,150,200,30),"Start Game")){
+		PlayerPrefs.SetFloat("money", money);
+		PlayerPrefs.SetInt("goblinCounter", goblinCounter);
 		Application.LoadLevel("ChooseLevel");
 	}
 }
