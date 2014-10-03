@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start(){
-	PlayerPrefs.SetFloat("money", 25);
+	PlayerPrefs.SetFloat("money", 0);
 	PlayerPrefs.SetInt("goblinCounter", 0);
 }
 
