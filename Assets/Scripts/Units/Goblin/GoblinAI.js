@@ -83,7 +83,6 @@ function Update () {
 		var targetDistance = Vector3.Distance(gameObject.transform.position, target.transform.position);
 		if(attackDistance >= targetDistance){
 			fighting = true;
-			print("in attack distance");
 			if(Time.time >= nextAttackIn){
 				transform.LookAt(target.transform);
 				animation.CrossFade("attack1");
@@ -91,6 +90,10 @@ function Update () {
 				nextAttackIn = Time.time + attackSpeed;
 			}
 		}
+	}
+	
+	if (gameObject.GetComponent(Counter).hp <= 0){
+		Destroy(gameObject);
 	}
 }
 
