@@ -1,14 +1,15 @@
 ﻿#pragma strict
 
 var isObjective : boolean = false;
-var questScript : String;
+var questTracker : GameObject;
 var money : float;
 
 var target : GameObject;
 var inCombat : boolean = false;
 var fighting : boolean = false;
 
-var dist : float;
+private var minionDist : float;
+private var heroDist : float;
 
 private var agent : NavMeshAgent;
 private var attackSpeed : float;
@@ -28,20 +29,27 @@ function Start () {
 	// By default loop all animations
 	animation.wrapMode = WrapMode.Loop;
 
+	questTracker = GameObject.Find("QuestTracker");
 }
 
 function Update () {
 
-if(FindClosestMinion() ==null){
-	dist = Vector3.Distance(FindClosestHero().transform.position, transform.position);
-	target = FindClosestHero();
-}else{
-	dist = Vector3.Distance(FindClosestMinion().transform.position, transform.position);
-	target = FindClosestMinion();
-}
-	agent.SetDestination(target.transform.position);
+	heroDist = Vector3.Distance(FindClosestHero().transform.position, transform.position);
+	minionDist = Vector3.Distance(FindClosestMinion().transform.position, transform.position);
+	
+	if(FindClosestMinion() == null || heroDist < minionDist){
+		target = FindClosestHero();
+	}else{
+		target = FindClosestMinion();
+	}
+	
+	var targetDist = Vector3.Distance(transform.position, target.transform.position);
 
-
+	if (targetDist <= aggroRange){
+		agent.SetDestination(target.transform.position);
+	}else{
+		agent.SetDestination(transform.position);
+	}
 
 	var currentFramePosition : Vector3 = transform.position;
  	var distance : float = Vector3.Distance(lastFramePosition, currentFramePosition);
@@ -55,17 +63,14 @@ if(FindClosestMinion() ==null){
   			animation.CrossFade("walk01");
   		}
 	}else{
-	
   			animation.CrossFade("idle");
   	}
-	if (dist <= aggroRange){
+	if (targetDist <= aggroRange){
 		inCombat = true;
 	}
 	
 	if (gameObject.GetComponent(Counter).hp <= 0){
-		if (isObjective == true){
-			GameObject.Find("QuestTracker").GetComponent(Level2Quests).tyrantCounter--;
-		}
+		questTracker.GetComponent(Quests).tyrantCounter--;
 		money = PlayerPrefs.GetFloat("money");
 		money += 5;
 		PlayerPrefs.SetFloat("money", money);
@@ -82,8 +87,8 @@ if(FindClosestMinion() ==null){
 			}
 		}
 	
-		var targetDistance = Vector3.Distance(gameObject.transform.position, target.transform.position);
-		if(attackDistance >= targetDistance){
+		
+		if(attackDistance >= targetDist){
 			fighting = true;
 			if(Time.time >= nextAttackIn){
 				transform.LookAt(target.transform);

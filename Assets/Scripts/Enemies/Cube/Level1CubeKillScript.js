@@ -12,7 +12,7 @@ function Update () {
 		money = PlayerPrefs.GetFloat("money");
 		money += 2;
 		PlayerPrefs.SetFloat("money", money);
-		questTracker.GetComponent(Level1Quests).cubeCounter--;
+		questTracker.GetComponent(Quests).cubeCounter--;
 		Destroy(gameObject);
 	}
 }
