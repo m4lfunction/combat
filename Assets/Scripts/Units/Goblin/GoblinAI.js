@@ -13,6 +13,7 @@ private var aggroRange : float;
 private var agent : NavMeshAgent;
 private var lastFramePosition: Vector3;
 private var target : GameObject;
+private var goblinCounter : int;
 
 function Start () {
 	// get stats
@@ -93,6 +94,9 @@ function Update () {
 	}
 	
 	if (gameObject.GetComponent(Counter).hp <= 0){
+		goblinCounter = PlayerPrefs.GetInt("goblinCounter");
+		goblinCounter--;
+		PlayerPrefs.SetInt("goblinCounter", goblinCounter);
 		Destroy(gameObject);
 	}
 }

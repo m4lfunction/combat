@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+var isObjective : boolean = false;
+var questScript : String;
+var money : float;
+
 var target : GameObject;
 var inCombat : boolean = false;
 var fighting : boolean = false;
@@ -59,6 +63,12 @@ if(FindClosestMinion() ==null){
 	}
 	
 	if (gameObject.GetComponent(Counter).hp <= 0){
+		if (isObjective == true){
+			GameObject.Find("QuestTracker").GetComponent(Level2Quests).tyrantCounter--;
+		}
+		money = PlayerPrefs.GetFloat("money");
+		money += 5;
+		PlayerPrefs.SetFloat("money", money);
 		Destroy(gameObject);
 	}
 	

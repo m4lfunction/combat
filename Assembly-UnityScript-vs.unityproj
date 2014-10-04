@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Menus\MainMenu.js" />
      <Compile Include="Assets\Scripts\Menus\SquadManagement.js" />
      <Compile Include="Assets\Scripts\QuestTracker\Level1Quests.js" />
+     <Compile Include="Assets\Scripts\QuestTracker\Level2Quests.js" />
      <Compile Include="Assets\Scripts\Units\Counter.js" />
      <Compile Include="Assets\Scripts\Units\Goblin\GoblinAI.js" />
      <Compile Include="Assets\Scripts\Units\Heroes\Golem\GolemAI.js" />
