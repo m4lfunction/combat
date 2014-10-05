@@ -94,7 +94,8 @@ function Update () {
 	}
 	
 	if (gameObject.GetComponent(Counter).hp <= 0){
-		Destroy(gameObject);
+		Application.LoadLevel("MainMenu");
+		
 	}
 }
 

@@ -5,6 +5,7 @@ var questTracker : GameObject;
 var money : float;
 
 var target : GameObject;
+var targetDist : float;
 var inCombat : boolean = false;
 var fighting : boolean = false;
 
@@ -19,7 +20,11 @@ private var aggroRange : float;
 
 private var lastFramePosition : Vector3;
 
+var currentSpeed : float;
+
 function Start () {
+
+
 	// get stats
 	attackSpeed = gameObject.GetComponent(Counter).attackSpeed;
 	attackDistance = gameObject.GetComponent(Counter).attackDistance;
@@ -28,6 +33,7 @@ function Start () {
 	
 	// By default loop all animations
 	animation.wrapMode = WrapMode.Loop;
+	animation["attack01"].wrapMode = WrapMode.Once;
 
 	questTracker = GameObject.Find("QuestTracker");
 }
@@ -36,15 +42,16 @@ function Update () {
 
 	heroDist = Vector3.Distance(FindClosestHero().transform.position, transform.position);
 	minionDist = Vector3.Distance(FindClosestMinion().transform.position, transform.position);
-	
+
+			
 	if(FindClosestMinion() == null || heroDist < minionDist){
 		target = FindClosestHero();
 	}else{
 		target = FindClosestMinion();
 	}
 	
-	var targetDist = Vector3.Distance(transform.position, target.transform.position);
-
+	targetDist = Vector3.Distance(transform.position, target.transform.position);
+	
 	if (targetDist <= aggroRange){
 		agent.SetDestination(target.transform.position);
 	}else{
@@ -55,16 +62,9 @@ function Update () {
  	var distance : float = Vector3.Distance(lastFramePosition, currentFramePosition);
  
  	lastFramePosition = currentFramePosition;
- 	var currentSpeed: float = Mathf.Abs(distance)/Time.deltaTime;
+ 	currentSpeed = Mathf.Abs(distance)/Time.deltaTime;
  	
- 	 	
-  	if(inCombat == false){
-  		if (currentSpeed > 0.1){
-  			animation.CrossFade("walk01");
-  		}
-	}else{
-  			animation.CrossFade("idle");
-  	}
+	Animate();
 	if (targetDist <= aggroRange){
 		inCombat = true;
 	}
@@ -79,20 +79,9 @@ function Update () {
 	
 	// Combat
 	if(inCombat == true){
-		if(fighting == false){
-  			if (currentSpeed > 0.1){
-  				animation.CrossFade("walk02");
-  			}else{
-  				animation.CrossFade("idle");
-			}
-		}
-	
-		
 		if(attackDistance >= targetDist){
-			fighting = true;
 			if(Time.time >= nextAttackIn){
 				transform.LookAt(target.transform);
-				animation.CrossFade("attack01");
 				target.GetComponent(Counter).hp--;
 				nextAttackIn = Time.time + attackSpeed;
 			}
@@ -136,4 +125,16 @@ function FindClosestHero () : GameObject {
 		} 
 	} 
 	return closestHero;
+}
+
+function Animate(){
+	if(targetDist >= attackDistance){
+ 		if (currentSpeed > 0.1){
+  			animation.CrossFade("walk01");
+		}else{
+			animation.CrossFade("idle");
+  		}
+  	}else{
+  		animation.CrossFade("attack01");
+  	}
 }
