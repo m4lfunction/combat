@@ -72,7 +72,7 @@ function Update () {
 	if (gameObject.GetComponent(Counter).hp <= 0){
 		questTracker.GetComponent(Quests).tyrantCounter--;
 		money = PlayerPrefs.GetFloat("money");
-		money += 5;
+		money += gameObject.GetComponent(Counter).price / 4;
 		PlayerPrefs.SetFloat("money", money);
 		Destroy(gameObject);
 	}

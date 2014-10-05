@@ -10,7 +10,7 @@ function Start () {
 function Update () {
 	if (gameObject.GetComponent(Counter).hp <= 0){
 		money = PlayerPrefs.GetFloat("money");
-		money += 2;
+		money += gameObject.GetComponent(Counter).price / 4;
 		PlayerPrefs.SetFloat("money", money);
 		questTracker.GetComponent(Quests).cubeCounter--;
 		Destroy(gameObject);
