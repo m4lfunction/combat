@@ -1,20 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\QuestTracker\Level1Quests.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menus\Chooselevel.js">
     <Files>
-      <File FileName="Assets\Scripts\QuestTracker\Level1Quests.js" Line="11" Column="44" />
-      <File FileName="Assets\Scripts\Menus\ChooseHero.js" Line="4" Column="33" />
-      <File FileName="Assets\Scripts\Menus\Chooselevel.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menus\Chooselevel.js" Line="14" Column="24" />
+      <File FileName="Assets\Scripts\Enemies\Tyrant\TyrantAI.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Units\Goblin\GoblinAI.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Units\Counter.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\MainMenu.js" Line="2" Column="1" />
-      <File FileName="Assets\Scripts\Menus\SquadManagement.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Golem\GolemAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Flag\InstantiateSquad.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\Cube\Level1CubeKillScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\QuestTracker\Level2Quests.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemies\Cube\CubeKillScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\CloseTestScene.js" Line="5" Column="34" />
+      <File FileName="Assets\Scripts\Enemies\Cube\Level1CubeKillScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Flag\InstantiateSquad.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Camera\CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Units\Heroes\Golem\GolemAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Flag\FlagController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Units\Heroes\AncientSpider\AncientSpiderAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menus\ChooseHero.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -10,4 +10,9 @@ function OnGUI() {
 		PlayerPrefs.SetString("Hero","Golem");
 		Application.LoadLevel("ChooseLevel");
 	}
+	
+	if (GUI.Button(Rect(10,110,200,30),"Ancient Spider")){
+		PlayerPrefs.SetString("Hero","AncientSpider");
+		Application.LoadLevel("ChooseLevel");
+	}
 }

@@ -13,6 +13,7 @@ private var aggroRange : float;
 private var agent : NavMeshAgent;
 private var lastFramePosition: Vector3;
 private var target : GameObject;
+private var goblinCounter : int;
 
 function Start () {
 	// get stats
@@ -83,7 +84,6 @@ function Update () {
 		var targetDistance = Vector3.Distance(gameObject.transform.position, target.transform.position);
 		if(attackDistance >= targetDistance){
 			fighting = true;
-			print("in attack distance");
 			if(Time.time >= nextAttackIn){
 				transform.LookAt(target.transform);
 				animation.CrossFade("attack1");
@@ -91,6 +91,13 @@ function Update () {
 				nextAttackIn = Time.time + attackSpeed;
 			}
 		}
+	}
+	
+	if (gameObject.GetComponent(Counter).hp <= 0){
+		goblinCounter = PlayerPrefs.GetInt("goblinCounter");
+		goblinCounter--;
+		PlayerPrefs.SetInt("goblinCounter", goblinCounter);
+		Destroy(gameObject);
 	}
 }
 
