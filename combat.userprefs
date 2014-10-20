@@ -1,20 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menus\Chooselevel.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\CameraController.js">
     <Files>
-      <File FileName="Assets\Scripts\Menus\Chooselevel.js" Line="14" Column="24" />
-      <File FileName="Assets\Scripts\Enemies\Tyrant\TyrantAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Goblin\GoblinAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Counter.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\QuestTracker\Level2Quests.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\Cube\CubeKillScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\Cube\Level1CubeKillScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Flag\InstantiateSquad.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\CameraController.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Heroes\Golem\GolemAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Flag\FlagController.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Heroes\AncientSpider\AncientSpiderAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Menus\ChooseHero.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Camera\CameraController.js" Line="30" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
